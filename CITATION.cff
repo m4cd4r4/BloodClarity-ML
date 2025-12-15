@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: "LabLens Research Team"
+title: "LabLens-ML: Clinical-Grade Browser-Based Biomarker Extraction"
+version: 1.0.0
+date-released: 2025-12-14
+url: "https://github.com/yourusername/lablens-ml"
+repository-code: "https://github.com/yourusername/lablens-ml"
+licence: MIT
+keywords:
+  - machine-learning
+  - medical-informatics
+  - named-entity-recognition
+  - browser-ml
+  - privacy-preserving
+  - clinical-nlp
