@@ -12,13 +12,13 @@
 
 **Objective:** To develop a clinical-grade (≥98% accuracy) biomarker extraction system deployable entirely in-browser with complete offline capability, addressing the fundamental tension between model performance and deployment constraints.
 
-**Methods:** We implemented a five-component system combining: (1) synthetic training data generation (10,000 samples across 53 laboratory formats and 165 biomarkers), (2) multi-task learning architecture jointly optimizing named entity recognition, format classification, and unit prediction, (3) multi-pass OCR preprocessing with error correction, (4) comprehensive biological plausibility validation, and (5) context-aware unit conversion. The system targets TinyBERT (14.5M parameters) optimized through knowledge distillation, INT8 quantization, and 50% pruning to achieve 12MB deployment size.
+**Methods:** We implemented a five-component system combining: (1) synthetic training data generation (10,000 samples across 53 laboratory formats and 165 biomarkers), (2) multi-task learning architecture jointly optimising named entity recognition, format classification, and unit prediction, (3) multi-pass OCR preprocessing with error correction, (4) comprehensive biological plausibility validation, and (5) context-aware unit conversion. The system targets TinyBERT (14.5M parameters) optimised through knowledge distillation, INT8 quantisation, and 50% pruning to achieve 12MB deployment size.
 
-**Results:** System-level accuracy reached 98.8% (raw ML: 97.6%, +biological validation: 0.8%, +context-aware units: 0.4%) across 165 biomarkers and 53 international laboratory formats. The optimized model achieves 45-80ms inference latency with 100% offline capability, representing a 10× speed improvement over cloud-based alternatives while eliminating recurring costs estimated at $162,000 annually for typical deployment scenarios.
+**Results:** System-level accuracy reached 98.8% (raw ML: 97.6%, +biological validation: 0.8%, +context-aware units: 0.4%) across 165 biomarkers and 53 international laboratory formats. The optimised model achieves 45-80ms inference latency with 100% offline capability, representing a 10× speed improvement over cloud-based alternatives while eliminating recurring costs estimated at $162,000 annually for typical deployment scenarios.
 
-**Conclusions:** Clinical-grade medical NER is achievable in browser environments through domain specialization, aggressive optimisation, and multi-modal validation. This approach enables privacy-preserving, cost-effective laboratory report processing at scales previously requiring enterprise infrastructure.
+**Conclusions:** Clinical-grade medical NER is achievable in browser environments through domain specialisation, aggressive optimisation, and multi-modal validation. This approach enables privacy-preserving, cost-effective laboratory report processing at scales previously requiring enterprise infrastructure.
 
-**Significance:** This work demonstrates that the perceived trade-off between model accuracy and deployment constraints is surmountable in specialized medical domains, opening pathways for privacy-compliant, offline-capable clinical decision support tools.
+**Significance:** This work demonstrates that the perceived trade-off between model accuracy and deployment constraints is surmountable in specialised medical domains, opening pathways for privacy-compliant, offline-capable clinical decision support tools.
 
 ---
 
@@ -65,7 +65,7 @@ This paper makes the following contributions:
 
 2. **Dataset**: A novel synthetic training corpus of 10,000 laboratory reports spanning 53 international formats, 165 biomarkers, 6 languages, and 15% adversarial examples simulating OCR errors.
 
-3. **Optimisation**: A three-stage pipeline (knowledge distillation, quantization, pruning) reducing model size from 420MB to 12MB while maintaining 97.6% raw ML accuracy.
+3. **Optimisation**: A three-stage pipeline (knowledge distillation, quantisation, pruning) reducing model size from 420MB to 12MB while maintaining 97.6% raw ML accuracy.
 
 4. **Validation**: Comprehensive biological plausibility limits for 165 biomarkers preventing common extraction errors (e.g., laboratory accreditation numbers misinterpreted as sodium values).
 
@@ -91,21 +91,21 @@ Our work differs by targeting structured laboratory report formats with constrai
 
 Recent advances in browser ML frameworks—TensorFlow.js [11], ONNX Runtime Web [26], and WebGPU [27]—have enabled client-side inference for computer vision [28] and NLP tasks [29]. However, medical applications remain scarce due to model size constraints and accuracy requirements.
 
-WebGPU (2024-2025 deployment) provides GPU acceleration in browsers, achieving inference speeds comparable to native deployments [30]. ONNX Runtime Web supports quantized models with INT8 operations, reducing memory footprint by 4× with minimal accuracy loss [31].
+WebGPU (2024-2025 deployment) provides GPU acceleration in browsers, achieving inference speeds comparable to native deployments [30]. ONNX Runtime Web supports quantised models with INT8 operations, reducing memory footprint by 4× with minimal accuracy loss [31].
 
 Despite these capabilities, existing browser-based medical AI systems (symptom checkers, drug interaction tools) rely on simpler rule-based logic rather than transformer models due to deployment constraints [32,33].
 
 ### 2.3 Model Compression Techniques
 
-Three primary compression techniques enable large model deployment: knowledge distillation [34], quantization [35], and pruning [36].
+Three primary compression techniques enable large model deployment: knowledge distillation [34], quantisation [35], and pruning [36].
 
 **Knowledge distillation** transfers knowledge from large "teacher" models to compact "student" models. DistilBERT [37] reduced BERT size by 40% while retaining 97% of language understanding performance. TinyBERT [38] achieved further compression (60MB) through dual-stage distillation.
 
-**Quantization** reduces numerical precision from 32-bit floats (FP32) to 8-bit integers (INT8), yielding 4× size reduction with typical accuracy loss <1% [39,40]. Post-training quantization requires no retraining, while quantization-aware training minimizes degradation [41].
+**Quantisation** reduces numerical precision from 32-bit floats (FP32) to 8-bit integers (INT8), yielding 4× size reduction with typical accuracy loss <1% [39,40]. Post-training quantisation requires no retraining, while quantisation-aware training minimises degradation [41].
 
 **Pruning** removes redundant neural connections. Magnitude-based pruning [42] eliminates weights below thresholds, while structured pruning [43] removes entire neurons. Lottery ticket hypothesis [44] suggests sparse subnetworks ("winning tickets") can match full model performance.
 
-Recent work combines these techniques: Q8BERT [45] applies quantization to DistilBERT, achieving 15MB models with 95% accuracy on GLUE benchmarks. However, medical domain applications remain unexplored.
+Recent work combines these techniques: Q8BERT [45] applies quantisation to DistilBERT, achieving 15MB models with 95% accuracy on GLUE benchmarks. However, medical domain applications remain unexplored.
 
 ### 2.4 Synthetic Data in Medical AI
 
@@ -187,7 +187,7 @@ Our system integrates five components to address challenges C1-C5:
 
 #### 4.1.1 Motivation
 
-Acquiring labeled laboratory reports presents dual challenges: patient privacy (HIPAA/GDPR) and format diversity (53 formats × 165 biomarkers = 8,745 combinations). Synthetic generation enables comprehensive coverage without privacy violations.
+Acquiring labelled laboratory reports presents dual challenges: patient privacy (HIPAA/GDPR) and format diversity (53 formats × 165 biomarkers = 8,745 combinations). Synthetic generation enables comprehensive coverage without privacy violations.
 
 #### 4.1.2 Format Templates
 
@@ -391,7 +391,7 @@ For extracted biomarker $(name, value, unit, range)$:
 
 1. Normalize name to canonical form (handle aliases):
    - "Haemoglobin" / "Hemoglobin" / "Hgb" / "Hb" → "haemoglobin"
-2. Retrieve limits $[L_{min}, L_{max}]$ for normalized name
+2. Retrieve limits $[L_{min}, L_{max}]$ for normalised name
 3. Check: $L_{min} \leq value \leq L_{max}$
 4. If violated: Flag extraction as implausible, suppress from results
 
@@ -505,7 +505,7 @@ $$w_{INT8} = \text{round}\left(\frac{w_{FP32} - min(w)}{max(w) - min(w)} \times 
 During inference, dequantize:
 $$w_{FP32}' \approx \frac{w_{INT8}}{255} \times (max(w) - min(w)) + min(w)$$
 
-**Quantization-aware training**: Fine-tune model with simulated quantization to minimize accuracy loss [41].
+**Quantisation-aware training**: Fine-tune model with simulated quantisation to minimise accuracy loss [41].
 
 **Result**: 15MB model, 98.1% F1 score (-0.3% vs. FP32)
 
@@ -750,7 +750,7 @@ Complete offline operation addresses critical healthcare requirements:
 
 **HIPAA Compliance**: No protected health information (PHI) leaves the device, eliminating data breach risks and Business Associate Agreements (BAAs).
 
-**GDPR Compliance**: Zero data transfer to third parties satisfies "right to be forgotten" and data minimization principles.
+**GDPR Compliance**: Zero data transfer to third parties satisfies "right to be forgotten" and data minimisation principles.
 
 **Trust**: Patients increasingly demand data control [56]. Browser-based processing enables transparency ("Your data never leaves your computer").
 
@@ -784,7 +784,7 @@ At enterprise scale (10,000 daily users), annual savings reach **$162,000 (Cloud
 Related tasks (NER, format, unit) share representations, improving generalization [52].
 
 **Factor 4: Modern Browser Capabilities**
-WebGPU (2024-2025) provides near-native GPU performance. INT8 support in ONNX Runtime Web enables efficient quantized inference.
+WebGPU (2024-2025) provides near-native GPU performance. INT8 support in ONNX Runtime Web enables efficient quantised inference.
 
 **Factor 5: Validation Layers**
 ML errors caught by biological plausibility and context-aware units. Multi-modal validation exceeds pure ML accuracy.
@@ -919,7 +919,7 @@ This work demonstrates that clinical-grade medical NER (98.5% accuracy) is achie
 
 Key contributions include:
 
-1. **12MB optimized model** achieving 97.6% raw ML accuracy through distillation, quantization, and pruning
+1. **12MB optimised model** achieving 97.6% raw ML accuracy through distillation, quantisation, and pruning
 2. **System-level 98.8% accuracy** via multi-modal validation (biological plausibility + context-aware units)
 3. **10,000-sample synthetic corpus** spanning 53 formats, 165 biomarkers, and 6 languages with adversarial examples
 4. **45-80ms inference latency** on consumer hardware with 100% offline capability
@@ -1110,8 +1110,8 @@ Input: Training data D, Validation data D_val, Model θ, Task weights α, β, γ
 Output: Optimized model θ*
 
 1. Initialize θ ← PRETRAINED_TINYBERT()
-2. optimizer ← AdamW(θ, lr=2e-5, weight_decay=0.01)
-3. scheduler ← LINEAR_WARMUP(optimizer, warmup_steps=0.1*total_steps)
+2. optimiser ← AdamW(θ, lr=2e-5, weight_decay=0.01)
+3. scheduler ← LINEAR_WARMUP(optimiser, warmup_steps=0.1*total_steps)
 4.
 5. For epoch ← 1 to 10:
 6.   For batch in D:
@@ -1137,9 +1137,9 @@ Output: Optimized model θ*
 26.    // Backward pass
 27.    loss_total.BACKWARD()
 28.    CLIP_GRADIENTS(θ, max_norm=1.0)
-29.    optimizer.STEP()
+29.    optimiser.STEP()
 30.    scheduler.STEP()
-31.    optimizer.ZERO_GRAD()
+31.    optimiser.ZERO_GRAD()
 32.
 33.  // Validation
 34.  val_ner_f1 ← EVALUATE_NER(D_val, θ)
@@ -1297,7 +1297,7 @@ async function performEnhancedOCR(
 
 **Pre-Deployment:**
 - [ ] Train and validate model (NER F1 ≥98%)
-- [ ] Apply optimisation pipeline (distillation → quantization → pruning)
+- [ ] Apply optimisation pipeline (distillation → quantisation → pruning)
 - [ ] Export to ONNX format
 - [ ] Validate ONNX model (accuracy within 0.5% of PyTorch)
 - [ ] Test on target browsers (Chrome, Firefox, Safari, Edge)
