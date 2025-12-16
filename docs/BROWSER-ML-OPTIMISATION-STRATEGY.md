@@ -3,7 +3,7 @@
 
 **Target**: Near-perfect biomarker extraction running 100% offline in browser
 **Current Model**: TinyBERT NER (14.5M params, ~60MB)
-**Optimized Target**: <15MB, 97-98% accuracy, <100ms inference
+**Optimised Target**: <15MB, 97-98% accuracy, <100ms inference
 
 ---
 
@@ -45,12 +45,12 @@ Student Model (TinyBERT, 14.5M params)
 
 **Why it works**: Teacher learns complex patterns, student learns efficient representations.
 
-### Stage 2: Quantiaation (60MB → 15MB)
+### Stage 2: Quantisation (60MB → 15MB)
 
 Convert from 32-bit floats to 8-bit integers:
 
 ```python
-# Post-Training Quantization (PTQ)
+# Post-Training Quantisation (PTQ)
 import onnx
 from onnxruntime.quantization import quantize_dynamic
 
@@ -61,7 +61,7 @@ quantize_dynamic(
     model_input=model_fp32,
     model_output=model_int8,
     weight_type='int8',
-    optimize_model=True
+    optimise_model=True
 )
 ```
 
@@ -94,11 +94,11 @@ for module in model.modules():
 
 ---
 
-## Final Optimized Model Specs
+## Final Optimised Model Specs
 
 ```
-BloodVital Bio-NER v2.0 (Optimized)
-├── Architecture: TinyBERT-NER (pruned + quantized)
+BloodVital Bio-NER v2.0 (Optimised)
+├── Architecture: TinyBERT-NER (pruned + quantised)
 ├── Parameters: 7.2M (down from 14.5M)
 ├── Model Size: 12MB INT8 ONNX
 ├── Inference Speed: 50-80ms per PDF page (WebGPU)
@@ -162,9 +162,9 @@ python scripts/ml/distill_to_tinybert.py \
 - F1 score: 98.2-98.6%
 - Model size: 60MB FP32
 
-### Phase 3: Quantization (Week 3)
+### Phase 3: Quantisation (Week 3)
 ```bash
-# Quantize to INT8
+# Quantise to INT8
 python scripts/ml/quantize_model.py \
   --model_fp32 models/student/tinybert.onnx \
   --model_int8 models/quantized/tinybert_int8.onnx \
@@ -200,13 +200,13 @@ python scripts/ml/prune_and_finetune.py \
 // src/services/optimizedMLParser.ts
 import * as ort from 'onnxruntime-web';
 
-export class OptimizedBiomarkerParser {
+export class OptimisedBiomarkerParser {
   private session: ort.InferenceSession | null = null;
 
   async initialize() {
-    // Load optimized INT8 model (12MB)
+    // Load optimised INT8 model (12MB)
     this.session = await ort.InferenceSession.create(
-      '/models/biomarker_ner_optimized_int8.onnx',
+      '/models/biomarker_ner_optimised_int8.onnx',
       {
         executionProviders: [
           'webgpu',  // GPU acceleration (Chrome 113+)
@@ -218,7 +218,7 @@ export class OptimizedBiomarkerParser {
       }
     );
 
-    console.log('Model loaded: 12MB, INT8 quantized');
+    console.log('Model loaded: 12MB, INT8 quantised');
   }
 
   async parse(text: string): Promise<ExtractedBiomarker[]> {
@@ -253,7 +253,7 @@ export class OptimizedBiomarkerParser {
 **Comparison to Cloud API**:
 - Google Cloud Vision OCR: ~500ms latency + network
 - Azure Form Recognizer: ~800ms latency + network
-- **BloodVital Optimized**: 45-65ms, 100% offline
+- **BloodVital Optimised**: 45-65ms, 100% offline
 
 ---
 
@@ -277,7 +277,7 @@ export class OptimizedBiomarkerParser {
    - Our approach: Better representations through related tasks
 
 4. **Aggressive Optimisation**:
-   - Requires expertise in: distillation, quantization, pruning
+   - Requires expertise in: distillation, quantisation, pruning
    - Most teams stop at "good enough" cloud accuracy
    - We're pushing: "near-perfect" + offline + <15MB
 
@@ -292,7 +292,7 @@ export class OptimizedBiomarkerParser {
 
 ### vs Cloud-Based Solutions
 
-| Feature | Cloud AI | BloodVital Optimized |
+| Feature | Cloud AI | BloodVital Optimised |
 |---------|----------|-------------------|
 | **Privacy** | ❌ Data sent to servers | ✅ 100% offline |
 | **Latency** | ~500-1000ms | 45-80ms |
@@ -326,7 +326,7 @@ export class OptimizedBiomarkerParser {
 | **BlueBERT** | 420MB | 88% | Server |
 | **PubMedBERT** | 420MB | 90% | Server |
 | **BloodVital v1 (TinyBERT)** | 60MB | 98.4% | Browser (WASM) |
-| **BloodVital v2 (Optimized)** | **12MB** | **97.8%** | **Browser (WebGPU)** |
+| **BloodVital v2 (Optimised)** | **12MB** | **97.8%** | **Browser (WebGPU)** |
 
 **35x smaller than general medical BERT models, 150,000x smaller than GPT-4**
 
@@ -384,7 +384,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 ### Potential Improvements
 
 1. **Adaptive Precision** (10MB):
-   - INT4 quantization for embedding layer
+   - INT4 quantisation for embedding layer
    - INT8 for attention, FP16 for final layer
    - Target: 10MB, 97.2% accuracy
 
@@ -453,7 +453,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 
 ### Risk 3: Accuracy Degradation
 
-**Issue**: Pruning/quantization might hurt edge cases
+**Issue**: Pruning/quantisation might hurt edge cases
 **Mitigation**:
 - Extensive validation on 10K test samples
 - A/B test: FP32 vs INT8 in production
@@ -486,7 +486,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 |-------|----------|-------------|
 | **1. Teacher Training** | 1 week | 99.5% BERT-base model (420MB) |
 | **2. Distillation** | 1 week | 98.4% TinyBERT student (60MB) |
-| **3. Quantization** | 3 days | 98.1% INT8 model (15MB) |
+| **3. Quantisation** | 3 days | 98.1% INT8 model (15MB) |
 | **4. Pruning** | 4 days | 97.6% pruned model (12MB) |
 | **5. Integration Testing** | 1 week | Browser deployment validated |
 | **6. A/B Testing** | 2 weeks | Production rollout (10% → 100%) |
@@ -502,7 +502,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 1. ✅ **Narrow domain** (165 biomarkers, 53 formats)
 2. ✅ **Large synthetic dataset** (10K samples, 6 languages, 15% adversarial)
 3. ✅ **Multi-task learning** (NER + Format + Unit prediction)
-4. ✅ **Aggressive optimisation** (Distillation → Quantization → Pruning)
+4. ✅ **Aggressive optimisation** (Distillation → Quantisation → Pruning)
 5. ✅ **Modern browser tech** (WebGPU, ONNX Runtime Web)
 
 ### The Result:

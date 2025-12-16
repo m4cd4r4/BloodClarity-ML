@@ -71,7 +71,7 @@ TinyBERT (14.5M params)
   - Format classification: 0.3
   - Unit prediction: 0.2
 - **Adaptive learning**:
-  - AdamW optimizer with warmup
+  - AdamW optimiser with warmup
   - Linear learning rate schedule
   - Gradient clipping for stability
 - **Best model selection** based on NER F1 score
@@ -585,7 +585,7 @@ cp models/tinybert-ner-enhanced/biomarker_ner_model.onnx public/models/
 This comprehensive ML/OCR enhancement package moves BloodVital from experimental accuracy (~90%) to clinical-grade accuracy (98%+) through:
 
 1. **4x larger training dataset** with diverse, multi-region, multi-language samples
-2. **Multi-task learning** that jointly optimizes NER, format classification, and unit prediction
+2. **Multi-task learning** that jointly optimises NER, format classification, and unit prediction
 3. **Advanced OCR preprocessing** with multi-pass strategy and error correction
 4. **6x more validation rules** covering all 165 biomarkers to prevent parsing errors
 5. **Context-aware unit conversion** supporting 200+ units across 50+ biomarkers
