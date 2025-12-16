@@ -45,3 +45,4 @@ final/
 # Large training data files
 *_lab_reports.json
 synthetic_lab_reports.json
+*.backup

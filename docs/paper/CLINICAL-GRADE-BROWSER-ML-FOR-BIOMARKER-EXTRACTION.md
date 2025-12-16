@@ -32,16 +32,14 @@
    - 4.2 [Multi-Task Learning Architecture](#42-multi-task-learning-architecture)
    - 4.3 [OCR Preprocessing Pipeline](#43-ocr-preprocessing-pipeline)
    - 4.4 [Biological Plausibility Validation](#44-biological-plausibility-validation)
-   - 4.5 [Context-Aware Unit Conversion](#45-context-aware-unit-conversion)
    - 4.6 [Model Optimisation Pipeline](#46-model-optimisation-pipeline)
 5. [Experimental Design](#5-experimental-design)
 6. [Results](#6-results)
 7. [Discussion](#7-discussion)
 8. [Limitations](#8-limitations)
-9. [Future Work](#9-future-work)
-10. [Conclusion](#10-conclusion)
-11. [References](#11-references)
-12. [Appendices](#12-appendices)
+9. [Conclusion](#9-conclusion)
+10. [References](#10-references)
+11. [Appendices](#11-appendices)
 
 ---
 
@@ -853,67 +851,7 @@ This approach applies to other specialized medical NLP tasks with:
 
 ---
 
-## 9. Future Work
-
-### 9.1 Expanded Validation
-
-**Multi-Site Clinical Study**: Deploy at 10+ healthcare institutions across 5 continents. Collect 10,000+ real-world reports with physician-verified ground truth.
-
-**Longitudinal Performance**: Monitor accuracy over 12-24 months to detect format drift and retrain triggers.
-
-**Physician Validation**: Survey clinicians on extraction quality, clinical utility, and trust in automated systems.
-
-### 9.2 Technical Enhancements
-
-**Deep Learning OCR**: Replace Tesseract.js with TrOCR [59] or PaddleOCR for improved handwritten text recognition. Challenge: Model size (TrOCR: 240MB → requires further compression).
-
-**Mobile Optimisation**: Compile ONNX model to CoreML (iOS) and NNAPI (Android) for native GPU acceleration. Target: <100ms mobile inference.
-
-**Continuous Learning**: Implement federated learning [60] to update models from real-world usage while preserving privacy.
-
-**Multi-Modal Fusion**: Incorporate report images (graphs, charts) via vision transformers for comprehensive data extraction.
-
-### 9.3 Feature Expansion
-
-**Historical Trend Analysis**: Multi-report upload to visualize biomarker trajectories over time. Detect emerging patterns (e.g., declining kidney function).
-
-**Personalized Reference Ranges**: Adjust ranges by age, sex, ethnicity, pregnancy status per clinical guidelines [61].
-
-**Clinical Decision Support**: Flag abnormal patterns requiring attention (e.g., diabetic kidney disease: rising creatinine + proteinuria).
-
-**Multi-Language UI**: Expand interface beyond English to Spanish, Portuguese, Mandarin, Hindi for global accessibility.
-
-### 9.4 Format Expansion
-
-**200+ Formats**: Cover 95% of global laboratory volume by adding regional/institutional variations.
-
-**Imaging Reports**: Extend to radiology (X-ray, MRI findings) and pathology (biopsy results) using similar NER approach.
-
-**Genetic Reports**: Parse pharmacogenomics (PGx) and whole exome sequencing (WES) reports for variant extraction.
-
-### 9.5 Deployment Modes
-
-**Browser Extension**: Chrome/Firefox extension for one-click extraction from patient portal websites.
-
-**Mobile App**: Native iOS/Android apps with camera capture (photograph paper reports → OCR → extraction).
-
-**API Service**: Self-hosted Docker container for institutional deployment (maintains privacy while serving multiple users).
-
-**EHR Integration**: FHIR-compliant API for bi-directional data exchange with Epic, Cerner, Allscripts systems.
-
-### 9.6 Research Directions
-
-**Active Learning**: Identify low-confidence extractions for targeted physician review, using feedback to improve model.
-
-**Transfer Learning**: Pre-train on synthetic data, fine-tune on small real-world samples. Assess few-shot learning performance.
-
-**Explainability**: Visualize attention patterns to show which text regions influenced extractions, building clinician trust.
-
-**Fairness Analysis**: Evaluate accuracy across demographic groups (race, ethnicity, language) to detect and mitigate bias.
-
----
-
-## 10. Conclusion
+## 9. Conclusion
 
 This work demonstrates that clinical-grade medical NER (98.5% accuracy) is achievable in browser environments through domain-specific optimisation. Our five-component system—synthetic data generation, multi-task learning, OCR preprocessing, biological validation, and context-aware unit conversion—overcomes the perceived trade-off between model accuracy and deployment constraints.
 
@@ -925,7 +863,7 @@ Key contributions include:
 4. **45-80ms inference latency** on consumer hardware with 100% offline capability
 5. **$162,000 annual cost savings** vs. cloud alternatives at enterprise scale
 
-This approach generalizes to other specialized medical NLP tasks with constrained vocabularies and structured formats. Future work includes expanded validation across 10,000+ real-world reports, technical enhancements (deep learning OCR, mobile optimisation), and deployment modes (browser extension, EHR integration).
+The techniques presented here—domain-specific optimisation, synthetic data generation, and aggressive compression—are generalizable beyond laboratory reports. This work demonstrates that privacy-preserving, browser-based medical AI is not only feasible but can achieve clinical-grade accuracy, opening pathways for offline-capable clinical decision support tools.
 
 **Significance**: By achieving clinical-grade accuracy in privacy-preserving, cost-effective browser deployment, this work removes barriers to AI-assisted laboratory report processing. Patients gain control over health data while clinicians access automated extraction tools previously limited to enterprise cloud systems.
 
@@ -933,7 +871,7 @@ The perceived incompatibility between model accuracy and deployment constraints 
 
 ---
 
-## 11. References
+## 10. References
 
 [1] Howanitz PJ, Steindel SJ, Heard NV. Laboratory critical values policies and procedures: a College of American Pathologists Q-Probes study in 623 institutions. *Arch Pathol Lab Med*. 2002;126(6):663-669.
 
@@ -1059,7 +997,7 @@ The perceived incompatibility between model accuracy and deployment constraints 
 
 ---
 
-## 12. Appendices
+## 11. Appendices
 
 ### Appendix A: Synthetic Data Generation Algorithm
 
