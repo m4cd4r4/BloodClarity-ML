@@ -5,8 +5,8 @@ authors:
 title: "BloodVital-ML: Clinical-Grade Browser-Based Biomarker Extraction"
 version: 1.0.0
 date-released: 2025-12-14
-url: "https://github.com/yourusername/bloodvital-ml"
-repository-code: "https://github.com/yourusername/bloodvital-ml"
+url: "https://github.com/m4cd4r4/bloodvital-ml"
+repository-code: "https://github.com/m4cd4r4/bloodvital-ml"
 licence: MIT
 keywords:
   - machine-learning
