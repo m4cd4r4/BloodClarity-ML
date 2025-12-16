@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Training outputs
+training_output/
+checkpoints/
+runs/
+wandb/
+
+# Large files (use Git LFS)
+*.onnx
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Private/sensitive
+private/
+secrets/
+*.key
+
+# Large model files (users train their own)
+*.safetensors
+model.safetensors
+checkpoint-*/
+final/
+
+# Large training data files
+*_lab_reports.json
+synthetic_lab_reports.json
+*.backup
