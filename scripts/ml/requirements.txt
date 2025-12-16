@@ -1,0 +1,13 @@
+# Requirements for LabLens ML Synthetic Data Generation
+# Python 3.8+
+
+# Fake data generation
+faker>=20.0.0
+
+# Core dependencies (should already be installed)
+# No additional ML libraries needed for generation
+# Training dependencies would include:
+# transformers>=4.35.0
+# torch>=2.0.0
+# datasets>=2.14.0
+# accelerate>=0.24.0
