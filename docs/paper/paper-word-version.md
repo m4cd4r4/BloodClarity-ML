@@ -1,8 +1,8 @@
 # Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports
 
-**Authors:** LabLens Research Team
+**Authors:** BloodVital Research Team
 
-**Correspondence:** research@lablens.dev
+**Correspondence:** research@bloodvital.com
 
 **Date:** December 14, 2025
 
@@ -216,7 +216,7 @@ Complete offline operation addresses:
 Enterprise scale (10,000 daily users, 3 PDFs/user):
 - **Cloud OCR**: $162,000 annual cost
 - **Commercial API**: $540,000 annual cost
-- **LabLens (Browser)**: $0 marginal cost
+- **BloodVital (Browser)**: $0 marginal cost
 
 ### 5.4 Limitations
 
@@ -282,4 +282,4 @@ By achieving clinical-grade accuracy in privacy-preserving browser deployment, t
 5. Submit via journal submission portal
 
 **Suggested Citation:**
-LabLens Research Team. Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports. Preprint. December 2025.
+BloodVital Research Team. Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports. Preprint. December 2025.

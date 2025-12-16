@@ -1,6 +1,6 @@
-# Contributing to LabLens-ML
+# Contributing to BloodVital-ML
 
-Thank you for your interest in contributing to LabLens-ML!
+Thank you for your interest in contributing to BloodVital-ML!
 
 ## How to Contribute
 

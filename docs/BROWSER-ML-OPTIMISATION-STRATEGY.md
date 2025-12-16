@@ -97,7 +97,7 @@ for module in model.modules():
 ## Final Optimized Model Specs
 
 ```
-LabLens Bio-NER v2.0 (Optimized)
+BloodVital Bio-NER v2.0 (Optimized)
 ├── Architecture: TinyBERT-NER (pruned + quantized)
 ├── Parameters: 7.2M (down from 14.5M)
 ├── Model Size: 12MB INT8 ONNX
@@ -253,7 +253,7 @@ export class OptimizedBiomarkerParser {
 **Comparison to Cloud API**:
 - Google Cloud Vision OCR: ~500ms latency + network
 - Azure Form Recognizer: ~800ms latency + network
-- **LabLens Optimized**: 45-65ms, 100% offline
+- **BloodVital Optimized**: 45-65ms, 100% offline
 
 ---
 
@@ -292,7 +292,7 @@ export class OptimizedBiomarkerParser {
 
 ### vs Cloud-Based Solutions
 
-| Feature | Cloud AI | LabLens Optimized |
+| Feature | Cloud AI | BloodVital Optimized |
 |---------|----------|-------------------|
 | **Privacy** | ❌ Data sent to servers | ✅ 100% offline |
 | **Latency** | ~500-1000ms | 45-80ms |
@@ -303,7 +303,7 @@ export class OptimizedBiomarkerParser {
 
 ### vs Traditional OCR + Rules
 
-| Feature | Tesseract + Regex | LabLens ML |
+| Feature | Tesseract + Regex | BloodVital ML |
 |---------|-------------------|------------|
 | **Accuracy** | 75-85% | 97.8% |
 | **Format Flexibility** | Brittle (breaks on new formats) | Adaptive (learns patterns) |
@@ -325,8 +325,8 @@ export class OptimizedBiomarkerParser {
 | **ClinicalBERT** | 420MB | 91% | Server |
 | **BlueBERT** | 420MB | 88% | Server |
 | **PubMedBERT** | 420MB | 90% | Server |
-| **LabLens v1 (TinyBERT)** | 60MB | 98.4% | Browser (WASM) |
-| **LabLens v2 (Optimized)** | **12MB** | **97.8%** | **Browser (WebGPU)** |
+| **BloodVital v1 (TinyBERT)** | 60MB | 98.4% | Browser (WASM) |
+| **BloodVital v2 (Optimized)** | **12MB** | **97.8%** | **Browser (WebGPU)** |
 
 **35x smaller than general medical BERT models, 150,000x smaller than GPT-4**
 
@@ -419,7 +419,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 | **Google Cloud Vision** | $1.50 | $13,500 |
 | **Azure Form Recognizer** | $1.00 | $9,000 |
 | **AWS Textract** | $1.50 | $13,500 |
-| **LabLens (Browser ML)** | $0.00 | **$0** |
+| **BloodVital (Browser ML)** | $0.00 | **$0** |
 
 **Annual Savings**: $162,000 (assuming Google pricing)
 
@@ -511,7 +511,7 @@ function trackPerformance(metrics: PerformanceMetrics) {
 - **50-80ms inference** (near-realtime)
 - **100% offline** (privacy-first)
 
-**This is why LabLens can be the first to achieve this - we're combining ML expertise, medical domain knowledge, and modern web technology in a way that hasn't been done before.**
+**This is why BloodVital can be the first to achieve this - we're combining ML expertise, medical domain knowledge, and modern web technology in a way that hasn't been done before.**
 
 ---
 

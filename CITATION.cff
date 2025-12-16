@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - name: "LabLens Research Team"
-title: "LabLens-ML: Clinical-Grade Browser-Based Biomarker Extraction"
+  - name: "BloodVital Research Team"
+title: "BloodVital-ML: Clinical-Grade Browser-Based Biomarker Extraction"
 version: 1.0.0
 date-released: 2025-12-14
-url: "https://github.com/yourusername/lablens-ml"
-repository-code: "https://github.com/yourusername/lablens-ml"
+url: "https://github.com/yourusername/bloodvital-ml"
+repository-code: "https://github.com/yourusername/bloodvital-ml"
 licence: MIT
 keywords:
   - machine-learning

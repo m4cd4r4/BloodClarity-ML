@@ -1,12 +1,12 @@
-# LabLens-ML: Clinical-Grade Browser-Based Biomarker Extraction
+# BloodVital-ML: Clinical-Grade Browser-Based Biomarker Extraction
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper](https://img.shields.io/badge/Paper-Read%20Online-blue)](docs/paper/index.html)
 
 **Academic research repository for privacy-preserving, browser-based medical biomarker extraction.**
 
-> **Note**: This is the research/ML component of LabLens. For the full application,
-> see [LabLens.dev](https://lablens.dev) (commercial product).
+> **Note**: This is the research/ML component of BloodVital. For the full application,
+> see [bloodvital.com](https://bloodvital.com) (commercial product).
 
 ## 🎯 Overview
 
@@ -27,13 +27,13 @@ entirely within the browser with **100% offline capability**.
 **Read the full paper**: [Clinical-Grade Browser-Based ML for Biomarker Extraction](docs/paper/index.html)
 
 Published: December 2025
-Authors: LabLens Research Team
+Authors: BloodVital Research Team
 
 **Citation**:
 ```bibtex
-@article{lablens2025clinical,
+@article{bloodvital2025clinical,
   title={Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction},
-  author={{LabLens Research Team}},
+  author={{BloodVital Research Team}},
   year={2025},
   journal={Preprint}
 }
@@ -130,7 +130,7 @@ System-Level (12MB, 98.8% accuracy)
 ## 📁 Repository Structure
 
 ```
-lablens-ml/
+bloodvital-ml/
 ├── docs/paper/          # Academic papers (HTML + Markdown)
 ├── data/
 │   ├── synthetic/       # Training data (10K samples)
@@ -218,15 +218,15 @@ in academic work, please cite our paper.
 
 ## 🔗 Related Projects
 
-- **LabLens** (Commercial Product): [lablens.dev](https://lablens.dev)
+- **BloodVital** (Commercial Product): [bloodvital.com](https://bloodvital.com)
 - **Paper Website**: [Read Online](docs/paper/index.html)
 - **Hugging Face Models**: Coming soon
 
 ## 📧 Contact
 
-- **Research Questions**: research@lablens.dev
-- **Issues**: [GitHub Issues](https://github.com/yourusername/lablens-ml/issues)
-- **Twitter**: [@LabLensDev](https://twitter.com/lablensdev)
+- **Research Questions**: research@bloodvital.com
+- **Issues**: [GitHub Issues](https://github.com/yourusername/bloodvital-ml/issues)
+- **Twitter**: [@BloodVitalDev](https://twitter.com/bloodvitaldev)
 
 ## 🙏 Acknowledgments
 

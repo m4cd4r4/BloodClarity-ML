@@ -1,4 +1,4 @@
-# LabLens Research Paper
+# BloodVital Research Paper
 
 ## Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports
 
@@ -125,25 +125,25 @@
 ### BibTeX
 
 ```bibtex
-@article{lablens2025clinical,
+@article{bloodvital2025clinical,
   title={Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports},
-  author={{LabLens Research Team}},
+  author={{BloodVital Research Team}},
   journal={Preprint},
   year={2025},
   month={December},
   note={Version 1.0},
-  url={https://github.com/yourusername/lablens/docs/paper},
+  url={https://github.com/yourusername/bloodvital/docs/paper},
   keywords={Medical Informatics, Named Entity Recognition, Browser-Based ML, Clinical Document Processing, HIPAA Compliance}
 }
 ```
 
 ### APA
 
-LabLens Research Team. (2025). *Clinical-grade browser-based machine learning for medical biomarker extraction from laboratory reports* (Version 1.0). Preprint.
+BloodVital Research Team. (2025). *Clinical-grade browser-based machine learning for medical biomarker extraction from laboratory reports* (Version 1.0). Preprint.
 
 ### Chicago
 
-LabLens Research Team. "Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports." Preprint, December 2025.
+BloodVital Research Team. "Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports." Preprint, December 2025.
 
 ---
 
@@ -161,7 +161,7 @@ LabLens Research Team. "Clinical-Grade Browser-Based Machine Learning for Medica
 
 ### Code Availability
 
-All source code referenced in this paper is available in the LabLens repository:
+All source code referenced in this paper is available in the BloodVital repository:
 
 - **Synthetic Data Generator**: `scripts/ml/generate_comprehensive_training_data.py`
 - **Training Script**: `scripts/ml/train_tinybert_ner_enhanced.py`
@@ -193,9 +193,9 @@ All source code referenced in this paper is available in the LabLens repository:
 
 For questions, corrections, or collaboration inquiries:
 
-- **GitHub Issues**: [Report issues](https://github.com/yourusername/lablens/issues)
-- **Email**: research@lablens.dev
-- **Project Website**: https://lablens.dev
+- **GitHub Issues**: [Report issues](https://github.com/yourusername/bloodvital/issues)
+- **Email**: research@bloodvital.com
+- **Project Website**: https://bloodvital.com
 
 ---
 

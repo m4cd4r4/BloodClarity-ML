@@ -1,6 +1,6 @@
 # Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction from Laboratory Reports
 
-**Authors:** LabLens Research Team
+**Authors:** BloodVital Research Team
 **Date:** December 14, 2025
 **Keywords:** Medical Informatics, Named Entity Recognition, Browser-Based Machine Learning, Clinical Document Processing, HIPAA Compliance
 
@@ -768,7 +768,7 @@ Estimated cost savings vs. cloud alternatives (1,000 daily users, 3 PDFs/user):
 - Monthly: $4,500
 - **Annual: $54,000**
 
-**LabLens (Browser-based)**: $0 marginal cost
+**BloodVital (Browser-based)**: $0 marginal cost
 
 At enterprise scale (10,000 daily users), annual savings reach **$162,000 (Cloud OCR)** or **$540,000 (Commercial API)**.
 

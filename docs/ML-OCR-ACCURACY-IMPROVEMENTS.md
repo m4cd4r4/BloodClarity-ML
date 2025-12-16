@@ -582,7 +582,7 @@ cp models/tinybert-ner-enhanced/biomarker_ner_model.onnx public/models/
 
 ## Summary
 
-This comprehensive ML/OCR enhancement package moves LabLens from experimental accuracy (~90%) to clinical-grade accuracy (98%+) through:
+This comprehensive ML/OCR enhancement package moves BloodVital from experimental accuracy (~90%) to clinical-grade accuracy (98%+) through:
 
 1. **4x larger training dataset** with diverse, multi-region, multi-language samples
 2. **Multi-task learning** that jointly optimizes NER, format classification, and unit prediction
@@ -590,7 +590,7 @@ This comprehensive ML/OCR enhancement package moves LabLens from experimental ac
 4. **6x more validation rules** covering all 165 biomarkers to prevent parsing errors
 5. **Context-aware unit conversion** supporting 200+ units across 50+ biomarkers
 
-The improvements are production-ready, fully tested, and ready for integration into the LabLens web application.
+The improvements are production-ready, fully tested, and ready for integration into the BloodVital web application.
 
 **Build Status**: ✅ TypeScript compilation successful (16.16s)
 
@@ -598,4 +598,4 @@ The improvements are production-ready, fully tested, and ready for integration i
 
 **Generated**: December 14, 2025
 **Model**: Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
-**Session**: lablens-ml-accuracy-improvements
+**Session**: bloodvital-ml-accuracy-improvements

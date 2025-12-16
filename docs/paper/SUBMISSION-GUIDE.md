@@ -1,6 +1,6 @@
 # Paper Submission Guide
 
-This directory contains three versions of the LabLens-ML research paper for different submission venues.
+This directory contains three versions of the BloodVital-ML research paper for different submission venues.
 
 ## 📄 Available Formats
 
@@ -124,12 +124,12 @@ Clinical-Grade Browser-Based Machine Learning for Medical Biomarker Extraction f
 
 **Authors:**
 ```
-LabLens Research Team
+BloodVital Research Team
 ```
 
 **Corresponding Author:**
 ```
-Email: research@lablens.dev
+Email: research@bloodvital.com
 ```
 
 **Abstract:**
@@ -161,7 +161,7 @@ This research was self-funded with no external grants or institutional support.
 
 **9. Author Contributions:**
 ```
-The LabLens Research Team conceived the study, developed the methodology, implemented the system, conducted experiments, analysed results, and wrote the manuscript.
+The BloodVital Research Team conceived the study, developed the methodology, implemented the system, conducted experiments, analysed results, and wrote the manuscript.
 ```
 
 **10. Review and Submit:**
@@ -322,7 +322,7 @@ Before submitting to any venue:
 - [ ] No patient-identifying information
 - [ ] Ethics approval (if human data used) - **N/A** (synthetic data only)
 - [ ] Data sharing statement - **Our synthetic data is publicly available**
-- [ ] Code availability - **GitHub: lablens-ml**
+- [ ] Code availability - **GitHub: bloodvital-ml**
 
 ---
 
@@ -365,8 +365,8 @@ We suggest the following reviewers:
 Thank you for considering our manuscript.
 
 Sincerely,
-LabLens Research Team
-Correspondence: research@lablens.dev
+BloodVital Research Team
+Correspondence: research@bloodvital.com
 ```
 
 ---
@@ -374,8 +374,8 @@ Correspondence: research@lablens.dev
 ## 📞 Support
 
 For questions about paper formats or submission:
-- **Email**: research@lablens.dev
-- **GitHub**: https://github.com/yourusername/lablens-ml
+- **Email**: research@bloodvital.com
+- **GitHub**: https://github.com/yourusername/bloodvital-ml
 - **Documentation**: See README.md in paper directory
 
 ---
