@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Example Training Pipeline for LabLens TinyBERT NER Model
+Example Training Pipeline for BloodVital TinyBERT NER Model
 
 This script demonstrates how to use the synthetic data for training.
 Run this AFTER generating synthetic data with generate_synthetic_data.py
@@ -282,8 +282,8 @@ results = trainer.evaluate(tokenized_datasets["test"])
 print(results)
 
 # 9. Save model
-trainer.save_model("./lablens-tinybert-ner")
-tokenizer.save_pretrained("./lablens-tinybert-ner")
+trainer.save_model("./bloodvital-tinybert-ner")
+tokenizer.save_pretrained("./bloodvital-tinybert-ner")
 '''
 
     print(code)
@@ -299,13 +299,13 @@ def main():
     parser.add_argument(
         "--input",
         type=str,
-        default="C:/Scratch/lablens/data/ml/synthetic_lab_reports.json",
+        default="C:/Scratch/bloodvital/data/ml/synthetic_lab_reports.json",
         help="Input synthetic data JSON file"
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="C:/Scratch/lablens/data/ml/",
+        default="C:/Scratch/bloodvital/data/ml/",
         help="Output directory for train/val/test splits"
     )
     parser.add_argument(
@@ -330,7 +330,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 70)
-    print("LabLens TinyBERT Training Pipeline")
+    print("BloodVital TinyBERT Training Pipeline")
     print("=" * 70)
 
     # Load data
@@ -389,7 +389,7 @@ def main():
     print("2. Adapt the example training code above to your needs")
     print("3. Run training with: python your_training_script.py")
     print("4. Evaluate on test set")
-    print("5. Deploy model to LabLens app")
+    print("5. Deploy model to BloodVital app")
 
 
 if __name__ == "__main__":

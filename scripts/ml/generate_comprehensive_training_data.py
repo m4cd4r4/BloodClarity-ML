@@ -1,5 +1,5 @@
 """
-Comprehensive Synthetic Training Data Generator for LabLens
+Comprehensive Synthetic Training Data Generator for BloodVital
 
 Generates 10,000+ diverse training samples across:
 - 53 lab formats (Australia, USA, India, Southeast Asia, Latin America, Europe, Canada, Africa)

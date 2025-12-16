@@ -15,7 +15,7 @@ import shutil
 from pathlib import Path
 
 print("=" * 70)
-print("LabLens Model Conversion: PyTorch -> ONNX")
+print("BloodVital Model Conversion: PyTorch -> ONNX")
 print("=" * 70)
 
 # Check for required packages

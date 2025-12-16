@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Synthetic Lab Report Generator for LabLens ML Training
+Synthetic Lab Report Generator for BloodVital ML Training
 
 Generates realistic synthetic blood test reports across 23+ lab formats
 for training TinyBERT NER model to extract biomarkers.
 
-Author: LabLens Team
+Author: BloodVital Team
 Created: 2025-12-10
 """
 
@@ -978,7 +978,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Generate synthetic lab reports for LabLens ML training"
+        description="Generate synthetic lab reports for BloodVital ML training"
     )
     parser.add_argument(
         "--num-samples",
@@ -989,7 +989,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output",
         type=str,
-        default="C:/Scratch/lablens/data/ml/synthetic_lab_reports.json",
+        default="C:/Scratch/bloodvital/data/ml/synthetic_lab_reports.json",
         help="Output JSON file path"
     )
     parser.add_argument(
