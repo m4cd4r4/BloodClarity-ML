@@ -10,7 +10,7 @@
 ## Why This is Achievable (And Revolutionary)
 
 ### The Challenge
-> "Is it too much to ask for a near-sentient, in the context of the subject matter, AI ML-trained model to be available in-browser, for offline/local-only processing of uploaded data, with results bordering 100%?"
+> "Can we achieve near-perfect biomarker extraction in a browser-based model running entirely offline?"
 
 ### The Answer: No. Here's How
 
@@ -45,7 +45,7 @@ Student Model (TinyBERT, 14.5M params)
 
 **Why it works**: Teacher learns complex patterns, student learns efficient representations.
 
-### Stage 2: Quantization (60MB → 15MB)
+### Stage 2: Quantiaation (60MB → 15MB)
 
 Convert from 32-bit floats to 8-bit integers:
 
