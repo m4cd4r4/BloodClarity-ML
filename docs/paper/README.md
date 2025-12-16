@@ -52,7 +52,7 @@
 
 1. **Architecture**: Five-component system achieving clinical-grade accuracy
 2. **Dataset**: 10,000 synthetic samples across 53 formats and 165 biomarkers
-3. **Optimisation**: 12MB model via distillation, quantization, pruning
+3. **Optimisation**: 12MB model via distillation, quantisation, pruning
 4. **Validation**: Biological plausibility limits for 165 biomarkers
 5. **Deployment**: Browser-based with WebGPU/WASM support
 
@@ -76,7 +76,7 @@
 - **4.3** OCR preprocessing pipeline (multi-pass with error correction)
 - **4.4** Biological plausibility validation (165 biomarkers)
 - **4.5** Context-aware unit conversion (200+ units)
-- **4.6** Model optimisation (distillation, quantization, pruning)
+- **4.6** Model optimisation (distillation, quantisation, pruning)
 
 ### 4. Results (Section 6)
 - Training performance: 98.4% NER F1 score
@@ -88,7 +88,7 @@
 - Implications for medical informatics
 - Privacy and regulatory compliance (HIPAA/GDPR)
 - Economic impact ($162K annual savings)
-- Why this approach works (domain specialization)
+- Why this approach works (domain specialisation)
 
 ---
 
@@ -208,7 +208,7 @@ You are free to:
 - **Adapt**: Remix, transform, and build upon the material
 
 Under the following terms:
-- **Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made
+- **Attribution**: You must give appropriate credit, provide a link to the licence, and indicate if changes were made
 
 ---
 
