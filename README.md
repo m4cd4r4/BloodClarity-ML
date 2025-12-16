@@ -8,7 +8,7 @@
 > **Note**: This is the research/ML component of BloodVital. For the full application,
 > see [bloodvital.com](https://bloodvital.com) (commercial product).
 
-## 🎯 Overview
+## Overview
 
 This repository contains the machine learning models, training scripts, and research materials
 for achieving **98.8% clinical-grade accuracy** in biomarker extraction from laboratory reports,
@@ -22,7 +22,7 @@ entirely within the browser with **100% offline capability**.
 - **Privacy-First**: 100% offline, HIPAA/GDPR compliant by design
 - **$162K/year Savings**: vs. cloud alternatives at enterprise scale
 
-## 📚 Research Paper
+## Research Paper
 
 **Read the full paper**: [Clinical-Grade Browser-Based ML for Biomarker Extraction](docs/paper/index.html)
 
@@ -39,7 +39,7 @@ Authors: BloodVital Research Team
 }
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Generate Synthetic Training Data
 
@@ -81,7 +81,7 @@ python train_tinybert_ner_enhanced.py \
 
 See [examples/](examples/) for complete working examples.
 
-## 📊 Dataset
+## Dataset
 
 ### Synthetic Training Data
 
@@ -103,7 +103,7 @@ See [examples/](examples/) for complete working examples.
 
 **Download**: `data/biomarker-database.json`
 
-## 🏗️ Architecture
+## Architecture
 
 ### Five-Component System
 
@@ -145,7 +145,7 @@ bloodvital-ml/
 └── examples/            # Integration examples
 ```
 
-## 🔬 Reproducibility
+## Reproducibility
 
 All experiments are reproducible:
 
@@ -170,7 +170,7 @@ npm install onnxruntime-web
 - Model training: ~4 hours (RTX 4090) or ~8 hours (RTX 3070)
 - Optimisation: ~2 hours (quantisation + pruning)
 
-## 📈 Results
+## Results
 
 ### Synthetic Test Set
 
@@ -189,7 +189,7 @@ npm install onnxruntime-web
 | USA (LabCorp, Quest) | 5 | 97.8% |
 | **Overall** | **22** | **98.5%** |
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Areas of interest:
 
@@ -201,7 +201,7 @@ We welcome contributions! Areas of interest:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 📜 Licence
+## Licence
 
 This project is licenced under the **MIT Licence** - see [LICENCE](LICENCE) file.
 
@@ -216,19 +216,19 @@ in academic work, please cite our paper.
 - ONNX Runtime: MIT Licence (Microsoft)
 - Biomarker reference data: Public domain (clinical literature)
 
-## 🔗 Related Projects
+## Related Projects
 
 - **BloodVital** (Commercial Product): [bloodvital.com](https://bloodvital.com)
 - **Paper Website**: [Read Online](docs/paper/index.html)
 - **Hugging Face Models**: Coming soon
 
-## 📧 Contact
+## Contact
 
 - **Research Questions**: research@bloodvital.com
 - **Issues**: [GitHub Issues](https://github.com/yourusername/bloodvital-ml/issues)
 - **Twitter**: [@BloodVitalDev](https://twitter.com/bloodvitaldev)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **TinyBERT Team** (Huawei Noah's Ark Lab) for the base model
 - **ONNX Runtime Team** for browser ML infrastructure
