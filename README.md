@@ -1,7 +1,7 @@
 # BloodVital-ML: Clinical-Grade Browser-Based Biomarker Extraction
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-Read%20Online-blue)](docs/paper/index.html)
+[![Paper](https://img.shields.io/badge/Paper-Read%20Online-blue)](docs/paper/CLINICAL-GRADE-BROWSER-ML-FOR-BIOMARKER-EXTRACTION.md)
 [![Release](https://img.shields.io/github/v/release/m4cd4r4/bloodvital-ml)](https://github.com/m4cd4r4/bloodvital-ml/releases)
 
 **Academic research repository for privacy-preserving, browser-based medical biomarker extraction.**
@@ -25,7 +25,7 @@ entirely within the browser with **100% offline capability**.
 
 ## Research Paper
 
-**Read the full paper**: [Clinical-Grade Browser-Based ML for Biomarker Extraction](docs/paper/index.html)
+**Read the full paper**: [Clinical-Grade Browser-Based ML for Biomarker Extraction](docs/paper/CLINICAL-GRADE-BROWSER-ML-FOR-BIOMARKER-EXTRACTION.md)
 
 Published: December 2025
 Author: Macdara Ó Murchú
@@ -265,7 +265,7 @@ in academic work, please cite our paper.
 ## Related Projects
 
 - **BloodVital** (Commercial Product): [bloodvital.com](https://bloodvital.com)
-- **Paper Website**: [Read Online](docs/paper/index.html)
+- **Paper Website**: [Read Online](docs/paper/CLINICAL-GRADE-BROWSER-ML-FOR-BIOMARKER-EXTRACTION.md)
 - **Development Log**: [DEVLOG.md](DEVLOG.md)
 
 ## Contact
