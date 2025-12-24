@@ -1,4 +1,4 @@
-# Requirements for BloodVital ML Synthetic Data Generation
+# Requirements for BloodClarity ML Synthetic Data Generation
 # Python 3.8+
 
 # Fake data generation
