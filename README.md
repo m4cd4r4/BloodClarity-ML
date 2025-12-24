@@ -28,7 +28,7 @@ A five-component system achieving **98.8% extraction accuracy** (n=22 internatio
 | Metric | Value |
 |--------|-------|
 | System Accuracy | 98.8% |
-| Model Size | 12MB (optimised) |
+| Model Size | 14MB (INT8 quantised) |
 | Inference Latency | 45-80ms |
 | Offline Capability | 100% |
 | Biomarkers Supported | 102 |

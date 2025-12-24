@@ -2,7 +2,7 @@
 """
 INT8 Quantization for TinyBERT NER ONNX Model
 
-Reduces model size from ~54MB to ~12MB using dynamic INT8 quantization.
+Reduces model size from ~55MB to ~14MB using dynamic INT8 quantization.
 This is ideal for browser deployment where smaller models load faster.
 
 Usage:
