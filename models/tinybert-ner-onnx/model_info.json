@@ -1,0 +1,34 @@
+{
+  "name": "biomarker-ner",
+  "description": "TinyBERT NER model for biomarker extraction from lab reports",
+  "version": "1.0.0",
+  "labels": [
+    "B-BIOMARKER_NAME",
+    "B-BIOMARKER_UNIT",
+    "B-BIOMARKER_VALUE",
+    "I-BIOMARKER_NAME",
+    "I-BIOMARKER_UNIT",
+    "I-BIOMARKER_VALUE",
+    "O"
+  ],
+  "label2id": {
+    "B-BIOMARKER_NAME": 0,
+    "B-BIOMARKER_UNIT": 1,
+    "B-BIOMARKER_VALUE": 2,
+    "I-BIOMARKER_NAME": 3,
+    "I-BIOMARKER_UNIT": 4,
+    "I-BIOMARKER_VALUE": 5,
+    "O": 6
+  },
+  "id2label": {
+    "0": "B-BIOMARKER_NAME",
+    "1": "B-BIOMARKER_UNIT",
+    "2": "B-BIOMARKER_VALUE",
+    "3": "I-BIOMARKER_NAME",
+    "4": "I-BIOMARKER_UNIT",
+    "5": "I-BIOMARKER_VALUE",
+    "6": "O"
+  },
+  "maxLength": 256,
+  "format": "onnx"
+}

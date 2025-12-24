@@ -14,10 +14,15 @@ checkpoints/
 runs/
 wandb/
 
-# Large files (use Git LFS)
-*.onnx
+# Large files (use Git LFS for tracked models)
 *.pt
 *.pth
+
+# ONNX models - allow in models/tinybert-ner-onnx/ (tracked with LFS)
+# Other *.onnx files are ignored
+/*.onnx
+/training_output/*.onnx
+!models/tinybert-ner-onnx/*.onnx
 
 # IDE
 .vscode/
